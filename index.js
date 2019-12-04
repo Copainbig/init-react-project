@@ -6,7 +6,7 @@ import options from "./lib/options";
 
 // TODO: handle missing argument
 let cli = program
-    .arguments('<projectName>');
+    .arguments('<project_name>');
 
 options.forEach(elt => {
     if (elt.default) {
