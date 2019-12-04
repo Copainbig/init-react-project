@@ -1,0 +1,40 @@
+{
+  "name": "init-react-project",
+  "version": "1.0.0",
+  "description": "init-react-project is a cli tool to init the react boilerplate. It is inspired by create-react-tool, but based on my usual setup.",
+  "bin": {
+    "init-react-project": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore \"./node_modules\",\"./.babelrc\",\"./package.json\",\"./npm-debug.log\",\"./package-lock.json\"",
+    "start": "npm run build && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Copainbig/init-react-project.git"
+  },
+  "keywords": [
+    "react",
+    "boilerplate",
+    "redux",
+    "cli"
+  ],
+  "author": "Charles HUSQUIN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Copainbig/init-react-project/issues"
+  },
+  "homepage": "https://github.com/Copainbig/init-react-project#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "cli-progress": "^3.4.0",
+    "commander": "^4.0.1",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "rimraf": "^3.0.0"
+  }
+}
