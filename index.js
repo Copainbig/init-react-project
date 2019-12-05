@@ -26,3 +26,9 @@ cli.description('Simple and easily customizable react project creation CLI.')
         }
     })
     .parse(process.argv);
+
+//Display help if mandatory top-level argument missing
+if(!program.args.length){
+    console.log(" --- Missing argument <project_name> ---");
+    program.help();
+}
